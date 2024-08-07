@@ -1,0 +1,32 @@
+[
+  {
+    "_id": "67rdca3eeb7f6fgeed471198",
+    "name": "Grocery",
+    "color": "primary"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed471100",
+    "name": "Taxi",
+    "color": "secondary"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed4711012",
+    "name": "Cafe & restaurants",
+    "color": "success"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed471101",
+    "name": "Trips",
+    "color": "danger"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed471102",
+    "name": "Public service",
+    "color": "info"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed471103",
+    "name": "Medicine",
+    "color": "dark"
+  }
+]

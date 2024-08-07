@@ -1,0 +1,6 @@
+{
+  "port": 8080,
+  "mongoUri": "mongodb+srv://Roman:1234@cluster0.cdnml.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  "tokenKey": "password swordfish",
+  "refreshKey": "password cabbage dragon"
+}
