@@ -3,13 +3,47 @@ const BankAccount = require("../models/BankAccount");
 const router = express.Router({ mergeParams: true });
 const auth = require("../middleware/auth.middleware");
 
-router.get("/:userId", async (req, res) => {
+router
+  .get(auth, async (req, res) => {
+    try {
+      const { orderBy, equalTo } = req.query;
+      const list = await BankAccount.find({ [orderBy]: equalTo });
+      res.send(list);
+    } catch (error) {
+      res
+        .status(500)
+        .json({ message: "Something goes wrong. Try again later." });
+    }
+  })
+  .post(auth, async (req, res) => {
+    try {
+      const newBankAccount = await BankAccount.create({
+        ...req.body,
+        userId: req.user._id,
+      });
+      res.status(201).send(newBankAccount);
+    } catch (error) {
+      res
+        .status(500)
+        .json({ message: "Something goes wrong. Try again later." });
+    }
+  });
+
+router.delete("/:AccountId", auth, async (req, res) => {
   try {
-    const { userId } = req.params;
-    const list = await BankAccount.find({ userId });
-    res.status(200).send(list);
-  } catch (error) {
-    res.status(500).json({ message: "Something goes wrong. Try again later." });
+    const { AccountId } = req.params;
+    const removedBankAccount = await BankAccount.findById(AccountId);
+
+    if (removedBankAccount.userId.toString() === req.user._id) {
+      await removedBankAccount.deleteOne();
+      return res.send(null);
+    } else {
+      res.status(401).json({ message: "Unauthorized" });
+    }
+  } catch (e) {
+    res.status(500).json({
+      message: "Something goes wrong. Try again later.",
+    });
   }
 });
 
