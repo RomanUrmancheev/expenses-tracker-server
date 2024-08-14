@@ -4,6 +4,7 @@ const router = express.Router({ mergeParams: true });
 const auth = require("../middleware/auth.middleware");
 
 router
+  .route("/")
   .get(auth, async (req, res) => {
     try {
       const { orderBy, equalTo } = req.query;

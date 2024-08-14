@@ -4,6 +4,7 @@ const router = express.Router({ mergeParams: true });
 const auth = require("../middleware/auth.middleware");
 
 router
+  .route("/")
   .get(auth, async (req, res) => {
     try {
       const { orderBy, equalTo } = req.query;
@@ -21,6 +22,7 @@ router
         ...req.body,
         userId: req.user._id,
       });
+      console.log(newBankAccount);
       res.status(201).send(newBankAccount);
     } catch (error) {
       res

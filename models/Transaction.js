@@ -9,7 +9,7 @@ const schema = new Schema(
     bankAccountId: { type: Schema.Types.ObjectId, ref: "BankAccount" },
     userId: { type: Schema.Types.ObjectId, ref: "User" },
     category: { type: Schema.Types.ObjectId, ref: "Category" },
-    isDebit: Boolean,
+    isExpense: Boolean,
     Date: String,
   },
   {
