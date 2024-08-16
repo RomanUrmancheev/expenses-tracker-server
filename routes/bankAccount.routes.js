@@ -53,14 +53,10 @@ router.patch("/:id", auth, async (req, res) => {
   try {
     const { id } = req.params;
 
-    if (id === req.user._id) {
-      const updatedAccount = await BankAccount.findByIdAndUpdate(id, req.body, {
-        new: true,
-      });
-      res.send(updatedAccount);
-    } else {
-      res.status(401).json({ message: "Unauthorized" });
-    }
+    const updatedAccount = await BankAccount.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    res.send(updatedAccount);
   } catch (error) {
     res.status(500).json({ message: "Something goes wrong. Try again later." });
   }

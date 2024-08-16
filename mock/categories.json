@@ -1,32 +1,32 @@
 [
   {
     "_id": "67rdca3eeb7f6fgeed471198",
-    "name": "Grocery",
+    "title": "Grocery",
     "color": "primary"
   },
   {
     "_id": "67rdca3eeb7f6fgeed471100",
-    "name": "Taxi",
+    "title": "Taxi",
     "color": "secondary"
   },
   {
     "_id": "67rdca3eeb7f6fgeed4711012",
-    "name": "Cafe & restaurants",
+    "title": "Cafe & restaurants",
     "color": "success"
   },
   {
     "_id": "67rdca3eeb7f6fgeed471101",
-    "name": "Trips",
+    "title": "Trips",
     "color": "danger"
   },
   {
     "_id": "67rdca3eeb7f6fgeed471102",
-    "name": "Public service",
+    "title": "Public service",
     "color": "info"
   },
   {
     "_id": "67rdca3eeb7f6fgeed471103",
-    "name": "Medicine",
+    "title": "Medicine",
     "color": "dark"
   }
 ]
