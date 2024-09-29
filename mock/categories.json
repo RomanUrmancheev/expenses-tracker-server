@@ -7,7 +7,7 @@
   {
     "_id": "67rdca3eeb7f6fgeed471100",
     "title": "Taxi",
-    "color": "secondary"
+    "color": "warning"
   },
   {
     "_id": "67rdca3eeb7f6fgeed4711012",
@@ -17,7 +17,7 @@
   {
     "_id": "67rdca3eeb7f6fgeed471101",
     "title": "Trips",
-    "color": "danger"
+    "color": "info-subtle"
   },
   {
     "_id": "67rdca3eeb7f6fgeed471102",
@@ -27,6 +27,11 @@
   {
     "_id": "67rdca3eeb7f6fgeed471103",
     "title": "Medicine",
-    "color": "dark"
+    "color": "danger"
+  },
+  {
+    "_id": "67rdca3eeb7f6fgeed471104",
+    "title": "Income",
+    "color": "success-subtle"
   }
 ]
